@@ -28,11 +28,13 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t killwar/graphql:0.0.0.2 .
+        docker build -t killwar/graphql:latest .
+        
 
     - name: Push Docker Image
       run: |
         docker push killwar/graphql:0.0.0.2
-      
+        docker push killwar/graphql:latest
     
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
